@@ -1,0 +1,18 @@
+config BR2_PACKAGE_ELINUX_HAL_API
+	bool "elinux_hal_api"
+	help
+	  A Hardware Abstracted Layer implementation for Linux
+	  
+config BR2_PACKAGE_ELINUX_HAL_API_URL
+	string "URL of elinux_hal_api source"
+	depends on BR2_PACKAGE_ELINUX_HAL_API
+	help
+	  Set the path to the git repo for this project.
+
+config BR2_PACKAGE_ELINUX_HAL_API_VERSION
+	string "Version for elinux_hal_api source"
+	depends on BR2_PACKAGE_ELINUX_HAL_API
+	default "master"
+	help
+	  Set the version for this package.
+	  

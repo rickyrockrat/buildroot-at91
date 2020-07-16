@@ -115,6 +115,10 @@ printf "Fetching all references\n"
 _git fetch origin
 _git fetch origin -t
 
+# prevent corrupted message if they supplied master as the version
+if [ "${cset}" = "master" ]; then
+	_git checkout -b _buildroot_especial_branch_of_null
+fi
 # Try to get the special refs exposed by some forges (pull-requests for
 # github, changes for gerrit...). There is no easy way to know whether
 # the cset the user passed us is such a special ref or a tag or a sha1

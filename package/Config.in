@@ -1495,6 +1495,10 @@ menu "Hardware handling"
 	source "package/tslib/Config.in"
 	source "package/urg/Config.in"
 	source "package/wiringpi/Config.in"
+	source "package/sig-libcomm/Config.in"
+	source "package/client-hal-api/Config.in"
+	source "package/elinux-hal-api/Config.in"
+	source "package/hal-sim/Config.in"
 endmenu
 
 menu "Javascript"

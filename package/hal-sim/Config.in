@@ -1,0 +1,20 @@
+config BR2_PACKAGE_HAL_SIM
+	bool "hal_sim"
+	select BR2_PACKAGE_SIG_LIBCOMM
+	select BR2_PACKAGE_CLIENT_HAL_API
+	help
+	  A client-server simulation for several HAL layers.
+	  
+config BR2_PACKAGE_HAL_SIM_URL
+	string "URL of hal_sim source"
+	depends on BR2_PACKAGE_HAL_SIM
+	help
+	  Set the path to the git repo for this project.
+
+config BR2_PACKAGE_HAL_SIM_VERSION
+	string "Version for hal_sim source"
+	depends on BR2_PACKAGE_HAL_SIM
+	default "master"
+	help
+	  Set the version for this package.
+	  

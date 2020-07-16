@@ -1,0 +1,18 @@
+config BR2_PACKAGE_CLIENT_HAL_API
+	bool "client_hal_api"
+	help
+	  An Hardware Abstraction Layer for a client talking to a generic register/buffer address space.
+	  
+config BR2_PACKAGE_CLIENT_HAL_API_URL
+	string "URL of client_hal_api source"
+	depends on BR2_PACKAGE_CLIENT_HAL_API
+	help
+	  Set the path to the git repo for this project.
+
+config BR2_PACKAGE_CLIENT_HAL_API_VERSION
+	string "Version for client_hal_api source"
+	depends on BR2_PACKAGE_CLIENT_HAL_API
+	default "master"
+	help
+	  Set the version for this package.
+	  

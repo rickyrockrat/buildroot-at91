@@ -1,0 +1,23 @@
+config BR2_PACKAGE_SIG_LIBCOMM
+	bool "sig-libcomm"
+	help
+	  Multi-transport, cross platform communications library
+	  
+config BR2_PACKAGE_SIG_LIBCOMM_URL
+	string "URL of sig-libcomm source"
+	depends on BR2_PACKAGE_SIG_LIBCOMM
+	help
+	  Set the path to the git repo for this project.
+
+config BR2_PACKAGE_SIG_LIBCOMM_VERSION
+	string "Version for sig-libcomm source"
+	depends on BR2_PACKAGE_SIG_LIBCOMM
+	default "master"
+	help
+	  Set the version for this package.
+
+config BR2_PACKAGE_SIG_LIBCOMM_ARCH
+	string
+	default "arm"        if BR2_arm || BR2_armeb
+	default "linux32"     if BR2_i386 && BR2_ARCH="i686"
+	default "linux64"     if BR2_x86_64	  

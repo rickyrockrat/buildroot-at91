@@ -3,7 +3,7 @@ if [ -z "$2" ]; then
 	BOARD_DIR="$(dirname $0)"
 	ITS_FILE="$BOARD_DIR/uboot.its"
 else
-	ITS_FILE="$1"
+	ITS_FILE="$2"
 fi
 echo "$0 $@"
 echo "Running cp '$ITS_FILE' '${BINARIES_DIR}'"

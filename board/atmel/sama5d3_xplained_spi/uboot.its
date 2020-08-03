@@ -11,7 +11,7 @@
             os = "linux";
             compression = "none";
             load = <0x22000000>;
-            entry = <0>;
+            entry = <0x22000000>;
             hash@1 {
                 algo = "sha1";
             };
@@ -35,7 +35,6 @@
             os = "linux";
             compression = "gzip";
             load = <0x21010000>;
-            entry = <00000000>;
             hash@1 {
                 algo = "sha1";
             };
@@ -44,6 +43,7 @@
     configurations {
         default = "conf@1";
         conf@1{
+            description = "Our U-Boot ramdisk boot image";
             kernel = "kernel@1";
             ramdisk = "ramdisk@1";
             fdt = "fdt@1";
